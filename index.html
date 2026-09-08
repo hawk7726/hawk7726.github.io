@@ -1,7 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="나를 소개하는 개인 홈페이지" />
+    <title>나의 홈페이지</title>
+    <style>
+      :root { --ink: #1f2937; --muted: #667085; --accent: #2563eb; --surface: #fff; --background: #f6f8fc; --line: #e5e7eb; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--background); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; }
+      .container { width: min(100% - 40px, 880px); margin: 0 auto; }
+      header { background: var(--surface); border-bottom: 1px solid var(--line); }
+      nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 20px; }
+      .brand { color: var(--ink); font-size: 1.05rem; font-weight: 800; text-decoration: none; }
+      .links { display: flex; gap: 18px; }
+      .links a { color: var(--muted); font-size: .95rem; text-decoration: none; }
+      .links a:hover { color: var(--accent); }
+      main { padding: 72px 0 56px; }
+      .hero { padding: 12px 0 64px; }
+      .eyebrow { color: var(--accent); font-size: .9rem; font-weight: 700; letter-spacing: .08em; }
+      h1 { max-width: 700px; margin: 12px 0 16px; font-size: clamp(2.35rem, 8vw, 4.8rem); line-height: 1.12; letter-spacing: -.05em; }
+      .intro { max-width: 650px; margin: 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.2rem); }
+      section { margin-top: 28px; padding: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+      h2 { margin: 0 0 14px; font-size: 1.35rem; letter-spacing: -.02em; }
+      p { margin: 0; }
+      .interest-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+      .interest-list li { padding: 8px 14px; background: #eff6ff; border-radius: 999px; color: #1d4ed8; font-size: .95rem; font-weight: 600; }
+      .contact { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .contact p { color: var(--muted); }
+      .button { display: inline-block; flex: 0 0 auto; padding: 10px 16px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+      .button:hover { background: #1d4ed8; }
+      footer { padding: 0 0 36px; color: var(--muted); font-size: .88rem; text-align: center; }
+      @media (max-width: 560px) { .container { width: min(100% - 32px, 880px); } nav { min-height: 58px; } .links { gap: 12px; } main { padding-top: 48px; } .hero { padding-bottom: 38px; } section { padding: 24px; border-radius: 14px; } .contact { align-items: flex-start; flex-direction: column; } }
+    </style>
+  </head>
   <body>
-    <hi>안녕하세요, 제 홈페이지입니다</hi>
-    <p>Github Pages로 만들었습니다!</p>
+    <header>
+      <nav class="container" aria-label="주요 메뉴">
+        <!-- 아래 '나의 이름'을 본인의 이름으로 바꿔 보세요. -->
+        <a class="brand" href="#top">나의 이름</a>
+        <div class="links"><a href="#about">소개</a><a href="#interests">관심사</a><a href="#contact">연락처</a></div>
+      </nav>
+    </header>
+    <main id="top" class="container">
+      <div class="hero">
+        <span class="eyebrow">PERSONAL WEBSITE</span>
+        <h1>안녕하세요,<br />나의 이름입니다.</h1>
+        <!-- 이 문장을 자신을 소개하는 한두 줄로 바꿔 보세요. -->
+        <p class="intro">배우고, 만들고, 나누는 것을 좋아합니다.<br />작은 아이디어를 더 나은 경험으로 바꿔 갑니다.</p>
+      </div>
+      <section id="about"><h2>소개</h2><p>저는 새로운 것을 배우며 차근차근 성장하는 사람입니다. 이곳에 나의 이야기와 작업을 기록합니다.</p></section>
+      <section id="interests">
+        <h2>관심사</h2>
+        <!-- 관심 있는 주제로 자유롭게 바꿔 보세요. -->
+        <ul class="interest-list"><li>웹 만들기</li><li>디자인</li><li>새로운 기술</li><li>좋은 콘텐츠</li></ul>
+      </section>
+      <section id="contact" class="contact">
+        <div><h2>연락처</h2><!-- 아래 이메일 주소를 실제 주소로 바꾸면 버튼으로 바로 연락할 수 있습니다. --><p>함께 이야기하고 싶다면 편하게 연락해 주세요.</p></div>
+        <a class="button" href="mailto:hello@example.com">이메일 보내기</a>
+      </section>
+    </main>
+    <footer class="container">© 2026 나의 이름. All rights reserved.</footer>
   </body>
 </html>
